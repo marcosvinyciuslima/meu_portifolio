@@ -1,5 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-pink: #d12f7a;
+    --color-black: #000000;
+    --color-blue: #0000ff;
+    --color-violet: #9200C7;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#person {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--color-black);
+}
+
+.person-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color-black);
+}
+
+.person-content div h1 {
+    color: transparent;
+    padding: 0px 4px;
+    position: relative;
+    width: fit-content;
+    font-size: 4.5rem;
+    line-height: 6rem;
+    animation: written_text .5s ease forwards;
+}
+
+.person-content div h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.person-content div h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.person-content div h1:nth-child(3) {
+    animation: written_text_name .3s ease forwards;
+    animation-delay: 3s;
+}
+
+.person-content div h1 span {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 58px;
+    background: var(--color-violet);
+    animation: written_text_box 1s ease forwards;
+    animation-delay: 5s;
+}
+
+.person-content div h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+.person-content div h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+.person-content div h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+.person-name {
+    margin-top: 11rem;
+}
+
+.stacks-content {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
+
+}
+
+.stacks-content h3 {
+    color: var(--color-white);
+    font-size: 1.50rem;
+    margin-left: 20px;
+}
+
+.stacks {
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+}
+
+.stacks ul li {
+    display: flex;
+    align-items: center;
+    margin: 12px;
+    padding: 10px;
+    list-style: none;
+    position: relative;
+}
+
+.stacks ul li img {
+    width: 30px;
+    height: auto;
+    transition: transform .3s ease;
+    filter: brightness(.5);
+}
+
+.stacks ul li div img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    transition: .5s;
+    filter: brightness(1);
+}
+
+.stacks ul li div:hover::after {
+    content: attr(data);
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    color: var(--color-white);
+}
+
+.person-background {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/program-photo.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+.person-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        linear-gradient(270deg, transparent 30%, var(--color-black)),
+        linear-gradient(160deg, transparent 60%, var(--color-black));
+}
+
+.wrapper-profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 14px;
+    margin: 20px 15px;
+    border-radius: 70%;
+    background:
+        radial-gradient(#8C4A88 60%, transparent 0),
+        radial-gradient(#73378C 68%, transparent 0),
+        linear-gradient(to top right, #73378C 0%, #5A278C 100%);
+} 
+
+.wrapper-profile-photo img {
+    border-radius: 50%;
+}
+
+.links a img {
+    width: 60px;
+    height: 30px;
+    filter: brightness(.9);
+    transition: all .5s ease;
+}
+
+.links a img:hover {
+    transition: .5s;
+    filter: brightness(1);
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.links a img:hover::after {
+    transition: .6s;
+    transform: scale(0);
+    animation-delay: 2.0s;
+}
+
+.links img:nth-child(1):hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.links img:nth-child(2):hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.links img:nth-child(3):hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+@keyframes written_text {
+    100% {
+        color: var(--color-white);
+    }
+}
+
+@keyframes written_text_name {
+    100% {
+        color: var(--color-violet);
+    }
+}
+
+@keyframes written_text_box {
+    50% {
+        width: 100%;
+        left: 0%;
+    }
+
+    100% {
+        width: 0%;
+        left: 100%;
+    }
 }
