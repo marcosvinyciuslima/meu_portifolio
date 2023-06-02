@@ -225,6 +225,119 @@ body {
     cursor: pointer;
 }
 
+#about {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-black);
+    display: flex;
+    color: var(--color-white);
+}
+
+.background-about {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+/* Tag de background gradiente não funciona dessa vez. */
+.image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:
+        linear-gradient(.25turn, transparent  60%, var(--color-black)),
+        linear-gradient(.5turn, transparent  60%, var(--color-black)),
+        linear-gradient(3turn, transparent  80%, var(--color-black));
+}
+
+.image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
+}
+
+.section-subtitle h2 p {
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.section-subtitle h2 p:nth-child(2) span {
+    background: var(--color-violet);
+    color: var(--color-white);
+    border-radius: 4.5px;
+    padding: 1px 1px;
+}
+
+.box-about h3 {
+    margin: 3rem;
+    font-size: 2rem;   
+}
+
+.box-about h3 p {
+    display: inline-block;
+    width: fit-content;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: var(--color-violet);
+}
+
+.box-about h4 {
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 1rem 3rem;
+}
+
+.box-about h4 p {
+    display: inline;
+    padding: 2px 4px;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-violet);
+    font-size: 1.5rem;
+}
+
+.button {
+    display: flex;
+    max-width: 190px;
+    margin: 4rem 3rem;
+}
+
+.button button {
+    display: inline-block;
+    width: 100%;
+    max-width: 172px;
+    padding: 10px;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: .15rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button button:hover {
+    transition: all .3s ease;
+    filter: brightness(.7);
+}
+
 @keyframes written_text {
     100% {
         color: var(--color-white);
