@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portifólio - Marcos Vinycius</title>
 </head>
 <body>
@@ -96,12 +97,15 @@
             </h4>
             
             <div class="button">
-                <button>Currículo</button>
+                <a href="/">
+                    <button>Currículo</button>
+                </a>
             </div>
         </div>
     </section>
 <!-- End About -->
 
+<!-- Projects -->
     <secton id="projects">
         <div class="projects-title">
             <h2>PROJETOS 💡</h2>
@@ -110,9 +114,11 @@
         <div class="wrapper-projects">
             <div class="card-project">
                 <div class="content-project">
-                    <div class="image-portect">
-                        <!-- <img src="./img/calculator_1.jpg" alt="Calculadora virtual"> -->
-                    </div> 
+                    <div class="image-project">
+                        <a href="/">
+                            <img src="./img/calculator_1.jpg" alt="Calculadora virtual">  
+                        </a>
+                    </div>
 
                     <span>Calculadora virtual</span>
                     
@@ -121,14 +127,108 @@
                     <div class="cta-project">
                         <a href="/">
                             Código
+                            <i class="fa-brands fa-github"></i>
                         </a>
                         <a href="/">
                             Site
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-project">
+                <div class="content-project">
+                    <div class="image-project">
+                        <a href="/">
+                            <img src="./img/task_list_2.jpg" alt="Lista de tarefas">  
+                        </a>
+                    </div>
+
+                    <span>Lista de tarefas</span>
+                    
+                    <p>Marque suas tarefas de forma virtual.</p>
+
+                    <div class="cta-project">
+                        <a href="/">
+                            Código
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="/">
+                            Site
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-project">
+                <div class="content-project">
+                    <div class="image-project">
+                        <a href="/">
+                            <img src="./img/sales_page_3.jpg" alt="Página de vendas">  
+                        </a>
+                    </div>
+
+                    <span>Página de vendas</span>
+                    
+                    <p>Página de vendas de vários tipos.</p>
+
+                    <div class="cta-project">
+                        <a href="/">
+                            Código
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="/">
+                            Site
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </secton>
+<!-- End Projects -->
+<!-- Contacts -->
+    <section id="contacts">
+        <div class="contact-icon-content">
+            <h2>
+                <p>Contato 📞</p>
+            </h2>
+        </div>
+        <div class="contact-icons-wrapper">
+            <div class="contact-icon-content"> 
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="contact-info">
+                    <span>E-mail</span>
+                    <p>marcos-vinycius@hotmail.com.br</p>
+                </div>
+            </div>
+            
+            <div class="contact-icon-content">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-map-location"></i>
+                </div>
+                <div class="contact-info">
+                    <span>Localização</span>
+                    <p>Caicó/RN</p>
+                </div>
+            </div>
+           
+            <div class="contact-icon-content">
+                <div class="contact-icon-content">
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <span>WhatsApp</span>
+                        <p>(84) 9 9897-6479</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
